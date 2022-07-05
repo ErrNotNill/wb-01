@@ -1,0 +1,5 @@
+server:
+  port: "8080"
+
+db:
+  uri: "postgres://postgres:root@localhost:5432/wildberries"

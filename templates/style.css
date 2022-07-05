@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    font-size: 20px;
+    color: white;
+}
+
+.order{
+    color: darkgrey;
+    font-size: 20px;
+}
+.input{
+    color: greenyellow;
+    font-size: 20px;
+}
+td{
+    color: greenyellow;
+}

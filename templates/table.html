@@ -1,0 +1,121 @@
+<html>
+<head>
+  <link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+</head>
+<body>
+<p> Data </p>
+<div class="order">
+  <table border="1" cellpadding="5" cellspacing="5">
+    <tr>
+      <td>Order_uid</td>
+      <td>Track_number</td>
+      <td>Entry</td>
+      <td>Locale</td>
+      <td>Internal_signature</td>
+      <td>Customer_id</td>
+      <td>Delivery_service</td>
+      <td>Shardkey</td>
+      <td>Sm_id</td>
+      <td>Date_created</td>
+      <td>Oof_shard</td>
+    </tr>
+    <tr>
+      <td class="input">{{.Order_uid}}</td>
+      <td class="input">{{.Track_number}}</td>
+      <td class="input">{{.Entry}}</td>
+      <td class="input">{{.Locale}}</td>
+      <td class="input">{{.Internal_signature}}</td>
+      <td class="input">{{.Customer_id}}</td>
+      <td class="input">{{.Delivery_service}}</td>
+      <td class="input">{{.Shardkey}}</td>
+      <td class="input">{{.Sm_id}}</td>
+      <td class="input">{{.Date_created}}</td>
+      <td class="input">{{.Oof_shard}}</td>
+    </tr>
+  </table>
+</div>
+<p> Delivery </p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <td>Name</td>
+    <td>Phone</td>
+    <td>Zip</td>
+    <td>City</td>
+    <td>Address</td>
+    <td>Region</td>
+    <td>Email</td>
+  </tr>
+  <tr>
+    <td class="input">{{.Delivery.Name}}</td>
+    <td class="input">{{.Delivery.Phone}}</td>
+    <td class="input">{{.Delivery.Zip}}</td>
+    <td class="input">{{.Delivery.City}}</td>
+    <td class="input">{{.Delivery.Address}}</td>
+    <td class="input">{{.Delivery.Region}}</td>
+    <td class="input">{{.Delivery.Email}}</td>
+  </tr>
+</table>
+<p> Payment </p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <td>Transaction</td>
+    <td>Request_id</td>
+    <td>Currency</td>
+    <td>Provider</td>
+    <td>Amount</td>
+    <td>Payment_dt</td>
+    <td>Bank</td>
+    <td>Delivery_cost</td>
+    <td>Goods_total</td>
+    <td>Custom_fee</td>
+  </tr>
+  <tr>
+    <td class="input">{{.Payment.Transaction}}</td>
+    <td class="input">{{.Payment.Request_id}}</td>
+    <td class="input">{{.Payment.Currency}}</td>
+    <td class="input">{{.Payment.Provider}}</td>
+    <td class="input">{{.Payment.Amount}}</td>
+    <td class="input">{{.Payment.Payment_dt}}</td>
+    <td class="input">{{.Payment.Bank}}</td>
+    <td class="input">{{.Payment.Delivery_cost}}</td>
+    <td class="input">{{.Payment.Goods_total}}</td>
+    <td class="input">{{.Payment.Custom_fee}}</td>
+  </tr>
+</table>
+
+<p> Items </p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <ul>
+    {{range .Items}}
+      <tr>
+        <td>Chrt_id</td>
+        <td>Track_number</td>
+        <td>Price</td>
+        <td>Rid</td>
+        <td>Name</td>
+        <td>Sale</td>
+        <td>Size</td>
+        <td>Total_price</td>
+        <td>Nm_id</td>
+        <td>Brand</td>
+        <td>Status</td>
+      </tr>
+      <tr>
+        <td class="input">{{.Chrt_id}}</td>
+        <td class="input">{{.Track_number}}</td>
+        <td class="input">{{.Price}}</td>
+        <td class="input">{{.Rid}}</td>
+        <td class="input">{{.Name}}</td>
+        <td class="input">{{.Sale}}</td>
+        <td class="input">{{.Size}}</td>
+        <td class="input">{{.Total_price}}</td>
+        <td class="input">{{.Nm_id}}</td>
+        <td class="input">{{.Brand}}</td>
+        <td class="input">{{.Status}}</td>
+      </tr>
+    {{end}}
+  </ul>
+</table>
+</body>
+</html>
